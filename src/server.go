@@ -90,7 +90,7 @@ func (s *server) listRooms(c *client) {
 	var rooms []string
 
 	if c.room != nil {
-		c.msg(fmt.Sprintf("I am in room: %s", c.room.name))
+		c.msg(fmt.Sprintf("I'm in room: %s", c.room.name))
 	} else {
 		c.msg("I'm not currently in a room.")
 	}

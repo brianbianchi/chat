@@ -18,6 +18,6 @@ $ telnet localhost 8888 #connect to server
 
 `/quit` - Exits the user from the chat server
 
-`/rooms` - Outputs the room the user is in and a list of available rooms.
+`/rooms` - Outputs a list of available rooms, and the room the user is currently in.
 
-`/users` - Outputs a list of user in the current room.
+`/users` - Outputs a list of users in the current room.

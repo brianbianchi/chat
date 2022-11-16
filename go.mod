@@ -1,3 +1,3 @@
-module chat
+module github.com/brianbianchi/tcp
 
-go 1.16
+go 1.19

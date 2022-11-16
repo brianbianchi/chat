@@ -1,23 +1,25 @@
-# TCP chat client.
+## TCP
 
+> The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite. It originated in the initial network implementation in which it complemented the Internet Protocol (IP). Therefore, the entire suite is commonly referred to as TCP/IP. TCP provides reliable, ordered, and error-checked delivery of a stream of octets (bytes) between applications running on hosts communicating via an IP network. Major internet applications such as the World Wide Web, email, remote administration, and file transfer rely on TCP, which is part of the Transport Layer of the TCP/IP suite. SSL/TLS often runs on top of TCP. -[wiki](https://en.wikipedia.org/wiki/Transmission_Control_Protocol)
+
+## Usage
 
 ```console
-$ go run ./src/* #start server
+$ go run main.go
 ```
 
 ```console
-$ telnet localhost 8888 #connect to server
+$ telnet 127.0.0.1 8080 #connect as "Client 1"
+$ Hello
+$ Client 2: Hi there
+$ Lorem ipsum dolor sit amet
+$ Client 2: Ut enim ad minim veniam
 ```
 
-### Commands
-`/nick <NICK_NAME>` - Assigns a nickname to the user.
-
-`/join <ROOM_NAME>` - Creates a new room and joins, or joins an existing room.
-
-`/msg <MESSAGE>` - Sends a message to the room you're in. This message emits to all other users in the room.
-
-`/quit` - Exits the user from the chat server
-
-`/rooms` - Outputs a list of available rooms, and the room the user is currently in.
-
-`/users` - Outputs a list of users in the current room.
+```console
+$ telnet 127.0.0.1 8080 #connect as "Client 2"
+$ Client 1: Hello
+$ Hi there
+$ Client 1: Lorem ipsum dolor sit amet
+$ Ut enim ad minim veniam
+```
